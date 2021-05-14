@@ -18,7 +18,9 @@
         <p class="class-price text-left">Rs.{{class_fee}}</p>
     </div>
     <div class="next-class-join p-4 mt-4 text-right">
-        <span class="float-left">Next Class</span> <a href="{{nextClass_link}}" class="next-class-join-link" target="_blank">Attend Now</a>
+        <span class="float-left">Next Class</span> 
+        <a *ngIf="nextClass_link" href="{{nextClass_link}}" class="next-class-join-link" target="_blank">Attend Now</a>
+        <span *ngIf="nextClass_empty_msg">{{nextClass_empty_msg}}</span>
     </div>
 </div>
 

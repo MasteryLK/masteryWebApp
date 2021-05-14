@@ -16,7 +16,9 @@ export class StdClassSummeryComponent implements OnInit {
   teacher_id: string;
   teacher_name: string;
   teacher_degree: string;
-  nextClass_link: string;
+  nextClass_link: string = '';
+
+  nextClass_empty_msg: string;
 
   constructor(private ar: ActivatedRoute, private cs: ClassesService) { }
 
@@ -43,7 +45,11 @@ export class StdClassSummeryComponent implements OnInit {
 
   getNextClass(cId){
     this.cs.getNextClassLink(cId).valueChanges().subscribe(nLink => {
-      this.nextClass_link = nLink.link;
+      if (nLink) {
+        this.nextClass_link = nLink.link;
+      }else{
+        this.nextClass_empty_msg = "Not Scheduled";
+      }
     }, err => {
       console.log(err);
     })

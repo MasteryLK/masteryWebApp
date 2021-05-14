@@ -38,7 +38,7 @@ export class TokenInterceptor implements HttpInterceptor{
     }
 
 
-    posIndicator:string = 'mastery-env.eba-k3m7m72m.us-east-2.elasticbeanstalk.com/';
+    posIndicator:string = 'masterybackend.tk/';
 
     private isValidReqUrl(reqUrl: string): boolean{
         let position = reqUrl.indexOf(this.posIndicator);
