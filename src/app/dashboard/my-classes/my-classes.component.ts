@@ -20,7 +20,6 @@ export class MyClassesComponent implements OnInit {
   constructor(public auth: AuthService, public us: UserServicesService, public cs: ClassesService) { }
 
   ngOnInit(): void {
-    console.log(this.auth.currentUser);
     this.getTeacherClasses(this.userId, this.getCurrentMonth());
     this.getCurrentMonth();
   }

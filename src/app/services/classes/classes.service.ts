@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ClassesService {
 
-  readonly APIUrl = "http://mastery-env.eba-k3m7m72m.us-east-2.elasticbeanstalk.com";
+  readonly APIUrl = "https://masterybackend.tk";
 
   studyMaterialList: AngularFireList<any>;
   assignmentList: AngularFireList<any>;
