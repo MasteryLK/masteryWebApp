@@ -38,7 +38,7 @@ const routes: Routes = [
     ]
   },
   { path: 'about', component: AboutComponent},
-  { path: 'passwordReset', component: PasswordRestComponent},
+  { path: 'forgotPassword', component: PasswordRestComponent},
   { 
     path: 'mPanel', 
     component: DashboardComponent,

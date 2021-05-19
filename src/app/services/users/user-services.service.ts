@@ -59,8 +59,8 @@ export class UserServicesService {
     return this.http.delete(this.APIUrl + '/admin/deleteTeacher/' + tId, {responseType: 'text' as 'json'});
   }
 
-  deleteStudent(val:any){
-    return this.http.delete(this.APIUrl + '/admin/deleteTeacher/' + val.studentId, val);
+  deleteStudent(stdId:any){
+    return this.http.delete(this.APIUrl + '/admin/deleteStudent/' + stdId, {responseType: 'text' as 'json'});
   }
   
 }

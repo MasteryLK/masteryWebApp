@@ -48,7 +48,17 @@ export class AllStudentsComponent implements OnInit {
   }
 
   deleteSelectedStudent(stdId, pageNo){
-
+    var confirmation = confirm("Are you sure to delete this student? Once deleted, student data can not be recovered.");
+    if (confirmation) {
+      this.uss.deleteStudent(stdId).subscribe((res) => {
+        this.successAlert = true;
+        this.successText = "Student deleted successfully.";
+        this.getAllStudents(pageNo);
+      }, (err) => {
+        this.errorAlert = true;
+        this.errorText = "Process failed. Something went wrong.";
+      })
+    }
   }
 
   pageNumberClick(event){
